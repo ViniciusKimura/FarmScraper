@@ -1,9 +1,9 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+#from selenium.webdriver.support.ui import WebDriverWait
+#from selenium.webdriver.support import expected_conditions as EC
 import pandas as pd
-from time import sleep
+#from time import sleep
 import undetected_chromedriver as uc
 
 city = "São José dos Campos, SP"
@@ -22,7 +22,8 @@ try:
     options.add_experimental_option("excludeSwitches", ["enable-automation"])
     options.add_experimental_option('useAutomationExtension', False)
     #driver = uc.Chrome(options=options)
-    driver = uc.Chrome(version_main=151)
+    driver = uc.Chrome(version_main=154)
+    
 
 
     driver.get("https://www.imovelweb.com.br")
