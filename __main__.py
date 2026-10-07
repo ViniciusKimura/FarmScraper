@@ -85,7 +85,8 @@ finally:
     sleep(2)
     if driver is not None:
         try:
-            driver.quit()
+            driver.close()
+            driver = None
         except Exception as e:
             print(f"Error closing driver: {e}")
 
@@ -93,3 +94,4 @@ finally:
 sleep(2)
 df = pd.DataFrame(arr[1:], columns=arr[0])
 df.to_csv("farm_data.csv", index=False)
+print("Finished scraping and saved data to farm_data.csv")
